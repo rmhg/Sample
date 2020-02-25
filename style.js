@@ -1,6 +1,6 @@
 var lat = document.getElementById("lat");
 var long = document.getElementById("long");
-var speed = document.getElementById("speed").firstChild;
+var speed = document.getElementById("speed").childNodes[3];
 var overlay  = document.getElementById("overlay");
 var opt = document.getElementById("option");
 var acc = document.getElementById("speed").childNodes[5];
