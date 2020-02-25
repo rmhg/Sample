@@ -41,5 +41,6 @@ this.navigator.geolocation.watchPosition((pos)=>{
     l = nl;
     ll = nll;
 },()=>{
+    console.log("ERROR");
     overlay.style.display = "flex";
 },{enableHighAccuracy:true,timeout:5000,maximumAge:1000000});
