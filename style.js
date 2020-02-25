@@ -7,13 +7,17 @@ var acc = document.getElementById("speed").childNodes[5];
 var oldts = 0;
 var l = 0;
 var ll = 0;
+function d2r(d)
+{
+    return d*(Math.PI/180);
+}
 function l2m(lat1,lat2,lon1,lon2)
 {
     var R = 6371000;
-    var rlat1 = lat1;
-    var rlat2 = lat2;
-     var dlat = (lat2-lat1);
-     var dlon = (lon2-lon1);
+    var rlat1 = d2r(lat1);
+    var rlat2 = d2r(lat2);
+     var dlat = d2r(lat2-lat1);
+     var dlon = d2r(lon2-lon1);
     var a = Math.sin(dlat/2)*Math.sin(dlat/2)+Math.cos(rlat1)*Math.cos(rlat2)*Math.sin(rlat1)*Math.sin(rlat2);
     var c = 2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a));
     var m = R*c;
