@@ -8,16 +8,12 @@ opt.addEventListener("click",()=>{
     opt.style.display = "none";
     document.getElementById("menu").style.display = "flex";
 });
-function update()
-{
-    this.navigator.geolocation.getCurrentPosition((pos)=>{
-    overlay.style.display = "none";
+this.navigator.geolocation.watchPosition((pos)=>{
     console.log(pos);
-    lat.innerHTML = "Latitude : " + pos.coords.latitude;
+    overlay.style.display = "none";
+      lat.innerHTML = "Latitude : " + pos.coords.latitude;
     long.innerHTML = "Longitude : " + pos.coords.longitude;
     speed.innerHTML = "Speed : " + pos.coords.speed;
-  },()=>{
-        overlay.style.display = "flex";
-    },{maximumAge:1000000,timeout:500000,enableHighAccuracy:true});
-}
-setInterval(update,utim);
+},()=>{
+    overlay.style.display = "flex";
+},{enableHighAccuracy:true,timeout:5000,maximumAge:1000000});
