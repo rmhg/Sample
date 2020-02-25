@@ -4,6 +4,7 @@ var speed = document.getElementById("speed").firstChild;
 var utim = 1000;   //millisec
 var overlay  = document.getElementById("overlay");
 var opt = document.getElementById("option");
+var acc = document.getElementById("speed").childNodes[5];
 opt.addEventListener("click",()=>{
     opt.style.display = "none";
     document.getElementById("menu").style.display = "flex";
@@ -14,6 +15,7 @@ this.navigator.geolocation.watchPosition((pos)=>{
       lat.innerHTML = "Latitude : " + pos.coords.latitude;
     long.innerHTML = "Longitude : " + pos.coords.longitude;
     speed.innerHTML = "Speed : " + pos.coords.speed;
+      acc.innerHTML = "Accuracy : " + pos.coords.accuracy;
 },()=>{
     overlay.style.display = "flex";
 },{enableHighAccuracy:true,timeout:5000,maximumAge:1000000});
