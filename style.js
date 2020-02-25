@@ -18,4 +18,4 @@ this.navigator.geolocation.watchPosition((pos)=>{
       acc.innerHTML = "Accuracy : " + pos.coords.accuracy;
 },()=>{
     overlay.style.display = "flex";
-},{enableHighAccuracy:!0,timeout:5000,maximumAge:1000000});
+},{enableHighAccuracy:false,timeout:5000,maximumAge:1000000});
