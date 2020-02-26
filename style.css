@@ -55,6 +55,12 @@ body
     display: flex;
     padding: 2px;
     flex-flow: column;
+    box-shadow: 1px 2px 2px 1px rgba(0,200,255,0.9);
+    text-align: center;
+    margin: 1px;
+    text-indent: 1px;
+    max-width: 160px;
+    cursor: pointer;
 }
 
 #overlay {
@@ -69,4 +75,9 @@ body
     z-index: 1000000000;
     font-size: 20px;
     font-family: monospace;
+}
+
+#option0 {
+    font-size: 30px;
+    cursor: pointer;
 }
